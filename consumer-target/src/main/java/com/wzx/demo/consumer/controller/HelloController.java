@@ -1,4 +1,4 @@
-package consumer.controller;
+package com.wzx.demo.consumer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
