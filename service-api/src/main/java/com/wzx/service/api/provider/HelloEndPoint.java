@@ -1,4 +1,4 @@
-package service.api.provider;
+package com.wzx.service.api.provider;
 
 import com.netflix.appinfo.EurekaInstanceConfig;
 import org.slf4j.Logger;
