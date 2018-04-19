@@ -13,11 +13,13 @@
         <module>service-api</module>
         <module>consumer-target</module>
         <module>common</module>
+        <module>service-domain</module>
     </modules>
 
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <guava-version>24.1-jre</guava-version>
     </properties>
 
     <dependencyManagement>
@@ -43,6 +45,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!--谷歌插件guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava-version}</version>
         </dependency>
     </dependencies>
 
