@@ -10,4 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service-domain</artifactId>
+    <dependencies>
+        <!--简化代码-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>
