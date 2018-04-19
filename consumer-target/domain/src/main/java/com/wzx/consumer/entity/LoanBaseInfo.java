@@ -1,4 +1,4 @@
-package com.wzx.apply;
+package com.wzx.consumer.entity;
 
 import lombok.Data;
 import lombok.ToString;
