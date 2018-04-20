@@ -13,7 +13,7 @@ import java.math.BigInteger;
 @Data
 @ToString
 public class LoanBaseInfo {
-    private BigInteger loanNo;
+    private String loanNo;
     private String customerCode;
     private String customerName;
     private BigDecimal amount;
