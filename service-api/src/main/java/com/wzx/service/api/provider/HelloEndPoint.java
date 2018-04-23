@@ -27,7 +27,7 @@ public class HelloEndPoint {
         this.logger.info("/hello, instanceId:{}, host:{}", eurekaInstanceConfig.getInstanceId(), eurekaInstanceConfig.getHostName(false));
             LoanBaseInfoVO loanBaseInfoVO = new LoanBaseInfoVO();
             loanBaseInfoVO.setLoanNo("20170825BDD3FB");
-            loanBaseInfoVO.setAmount(new BigDecimal(9999.99));
+            loanBaseInfoVO.setAmount(new BigDecimal(9999.99).setScale(2,BigDecimal.ROUND_HALF_UP));
             loanBaseInfoVO.setCustomerCode("wangzx");
             loanBaseInfoVO.setCustomerName("深科技");
         return loanBaseInfoVO;

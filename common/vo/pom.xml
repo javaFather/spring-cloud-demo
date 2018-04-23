@@ -13,11 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>wzx-cloud</groupId>
-            <artifactId>base-dependcy</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>wzx-cloud</groupId>
             <artifactId>domain</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
