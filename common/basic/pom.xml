@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>vo</artifactId>
+    <artifactId>basic</artifactId>
     <dependencies>
         <dependency>
             <groupId>wzx-cloud</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>base-dependcy</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

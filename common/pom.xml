@@ -15,7 +15,7 @@
         <module>base-server</module>
         <module>base-dependcy</module>
         <module>mybaties</module>
-        <module>vo</module>
+        <module>basic</module>
     </modules>
 
 

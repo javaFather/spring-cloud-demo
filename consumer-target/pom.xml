@@ -22,9 +22,15 @@
             <artifactId>base-server</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--实例VO-->
         <dependency>
             <groupId>wzx-cloud</groupId>
             <artifactId>vo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>wzx-cloud</groupId>
+            <artifactId>mybatis</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
