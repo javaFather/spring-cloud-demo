@@ -13,6 +13,7 @@
         <module>service-api</module>
         <module>consumer-target</module>
         <module>common</module>
+        <module>server-config</module>
     </modules>
 
 
