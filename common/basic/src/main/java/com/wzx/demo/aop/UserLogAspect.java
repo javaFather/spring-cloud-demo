@@ -1,8 +1,8 @@
-package com.wzx.aop;
+package com.wzx.demo.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,15 +17,14 @@ public class UserLogAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserLogAspect.class);
 
     /** 切点**/
-    @Pointcut("@annotation(com.wzx.annotation.UserLogs)")
+    @Pointcut("@annotation(com.wzx.demo.annotation.UserLogs)")
     public void userLogs(){
 
     }
 
-    @Around("userLogs()")
-    public Object userLogOperation(ProceedingJoinPoint proceed){
-
-        return null;
+    @Before("userLogs()")
+    public void userLogOperation(ProceedingJoinPoint proceed){
+        LOGGER.info("测试切面"+"**************");
     }
 
 }

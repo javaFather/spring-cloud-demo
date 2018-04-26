@@ -1,4 +1,4 @@
-package com.wzx.mybaties;
+package com.wzx.demo.mybaties;
 
 /**
  * @author wangzx

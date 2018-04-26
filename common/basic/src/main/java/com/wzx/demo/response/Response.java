@@ -1,4 +1,4 @@
-package com.wzx.response;
+package com.wzx.demo.response;
 
 import lombok.Data;
 

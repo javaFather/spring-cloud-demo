@@ -1,4 +1,4 @@
-package com.wzx.consumer.mapper;
+package com.wzx.demo.consumer.mapper;
 
 import com.wzx.consumer.entity.LoanBaseInfo;
 

@@ -1,4 +1,4 @@
-package com.wzx.service.discovery;
+package com.wzx.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
