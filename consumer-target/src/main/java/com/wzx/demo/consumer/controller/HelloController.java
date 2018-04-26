@@ -24,7 +24,7 @@ public class HelloController {
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
     @UserLogs(remark = "测试",operation = "成功")
     public LoanBaseInfo hello() {
-        LoanBaseInfo info=  restTemplate.getForObject("http://SERVICE-HELLO/findByLoanNo",LoanBaseInfo.class);
+        LoanBaseInfo info=  restTemplate.getForEntity("http://SERVICE-HELLO/findByLoanNo",LoanBaseInfo.class).getBody();
         return info;
     }
 }
