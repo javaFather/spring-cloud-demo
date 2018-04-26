@@ -1,6 +1,7 @@
 package com.wzx.demo.provider;
 
 import com.netflix.appinfo.EurekaInstanceConfig;
+import com.wzx.demo.annotation.UserLogs;
 import com.wzx.demo.consumer.entity.LoanBaseInfo;
 import com.wzx.demo.response.Response;
 import org.slf4j.Logger;
@@ -23,14 +24,15 @@ public class HelloEndPoint {
     @Value("${server.port}")
     private int serverPort = 0;
 
+
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
-    public Response<LoanBaseInfo> hello() {
+    public LoanBaseInfo hello() {
         this.logger.info("/hello, instanceId:{}, host:{}", eurekaInstanceConfig.getInstanceId(), eurekaInstanceConfig.getHostName(false));
             LoanBaseInfo loanBaseInfo = new LoanBaseInfo();
             loanBaseInfo.setLoanNo("20170825BDD3FB");
             loanBaseInfo.setAmount(new BigDecimal(9999.99).setScale(2,BigDecimal.ROUND_HALF_UP));
             loanBaseInfo.setCustomerCode("wangzx");
             loanBaseInfo.setCustomerName("深科技");
-        return Response.ok().addResponse(loanBaseInfo);
+        return loanBaseInfo;
     }
 }

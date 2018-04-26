@@ -6,6 +6,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * 日志切面
@@ -24,7 +25,7 @@ public class UserLogAspect {
 
     @Before("userLogs()")
     public void userLogOperation(ProceedingJoinPoint proceed){
-        LOGGER.info("测试切面"+"**************");
+        System.out.println("测试切面"+"**************");
     }
 
 }

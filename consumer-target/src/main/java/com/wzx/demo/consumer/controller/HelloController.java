@@ -2,6 +2,7 @@ package com.wzx.demo.consumer.controller;
 
 import com.wzx.demo.annotation.UserLogs;
 import com.wzx.demo.consumer.entity.LoanBaseInfo;
+import com.wzx.demo.response.Response;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,12 +20,11 @@ public class HelloController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @UserLogs(remark = "测试",operation = "成功啦")
+
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
+    @UserLogs(remark = "测试",operation = "成功")
     public LoanBaseInfo hello() {
-        LoanBaseInfo info=  restTemplate.getForEntity("http://SERVICE-HELLO/findByLoanNo", LoanBaseInfo.class).getBody();
-        LoanBaseInfo loanBaseInfo = new LoanBaseInfo();
-        BeanUtils.copyProperties(info,loanBaseInfo);
-        return loanBaseInfo;
+        LoanBaseInfo info=  restTemplate.getForObject("http://SERVICE-HELLO/findByLoanNo",LoanBaseInfo.class);
+        return info;
     }
 }
