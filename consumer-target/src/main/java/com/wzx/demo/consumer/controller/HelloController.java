@@ -5,6 +5,7 @@ import com.wzx.demo.consumer.entity.LoanBaseInfo;
 import com.wzx.demo.response.Response;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ public class HelloController {
 
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
     @UserLogs(remark = "测试",operation = "成功")
-    public LoanBaseInfo hello() {
+    public LoanBaseInfo hello(LoanBaseInfo inf) {
         LoanBaseInfo info=  restTemplate.getForEntity("http://SERVICE-HELLO/findByLoanNo",LoanBaseInfo.class).getBody();
         return info;
     }
