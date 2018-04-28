@@ -1,10 +1,9 @@
-package com.wzx.demo.consumer.entity;
+package com.wzx.demo;
 
 import lombok.Data;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 /**
  * @author wangzx

@@ -1,9 +1,7 @@
 package com.wzx.demo.provider;
 
 import com.netflix.appinfo.EurekaInstanceConfig;
-import com.wzx.demo.annotation.UserLogs;
-import com.wzx.demo.consumer.entity.LoanBaseInfo;
-import com.wzx.demo.response.Response;
+import com.wzx.demo.LoanBaseInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

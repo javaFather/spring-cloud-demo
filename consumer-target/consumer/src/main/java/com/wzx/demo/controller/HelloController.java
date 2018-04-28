@@ -1,15 +1,14 @@
-package com.wzx.demo.consumer.controller;
+package com.wzx.demo.controller;
 
+
+import com.wzx.demo.LoanBaseInfo;
 import com.wzx.demo.annotation.UserLogs;
-import com.wzx.demo.consumer.entity.LoanBaseInfo;
-import com.wzx.demo.response.Response;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
 
 /**
  * @author wangzx

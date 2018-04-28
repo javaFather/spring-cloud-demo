@@ -1,7 +1,7 @@
 package com.wzx.demo.consumer.mapper;
 
 
-import com.wzx.demo.consumer.entity.LoanBaseInfo;
+import com.wzx.demo.LoanBaseInfo;
 
 import java.util.Map;
 

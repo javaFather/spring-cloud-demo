@@ -1,4 +1,4 @@
-package com.wzx.demo.server.configuration;
+package com.wzx.demo.configuration;
 
 import com.wzx.demo.server.restful.MyRestTemplate;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
