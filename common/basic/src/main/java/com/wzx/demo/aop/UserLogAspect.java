@@ -52,8 +52,11 @@ public class UserLogAspect {
      */
     @Before("userLogs()")
     public void userLogOperation(JoinPoint joinPoint){
-//        getMethodParams(joinPoint);
-        getAnnotationParams(joinPoint);
+        /** 请求参数**/
+        JSONObject json = getMethodParams(joinPoint);
+        /**注解参数**/
+        Map<String, Object> map = getAnnotationParams(joinPoint);
+        // TODO 记录用户操作日志代码省略
     }
 
 
@@ -73,7 +76,6 @@ public class UserLogAspect {
                 continue;
             }
             json.put(parameterNames[i],args[i]);
-            System.out.println(args[i]);
         }
         return json;
     }
@@ -85,15 +87,10 @@ public class UserLogAspect {
         logs = params.getAnnotation(UserLogs.class);
         Map<String,Object> map = Maps.newHashMap();
         if(logs !=null){
-            Class clazz = logs.getClass();
-            Field[] fields = clazz.getFields();
-                if(fields.length>0){
-                    for(Field para:fields){
-
-                    }
-                }
+           map.put("remark",logs.remark());
+           map.put("operation",logs.operation());
         }
-        return null;
+        return map;
     }
 
 }
