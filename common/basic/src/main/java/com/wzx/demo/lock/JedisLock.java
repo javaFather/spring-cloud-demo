@@ -1,3 +1,5 @@
+package com.wzx.demo.lock;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
