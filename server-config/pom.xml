@@ -12,9 +12,8 @@
     <artifactId>server-config</artifactId>
     <dependencies>
         <dependency>
-            <groupId>wzx-cloud</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
 
