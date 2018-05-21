@@ -1,4 +1,4 @@
-package com.wzx.rocketmq.common;
+package com.wzx.demo.rocketmq.common;
 
 import redis.clients.jedis.Jedis;
 

@@ -1,4 +1,4 @@
-package com.wzx.rocketmq;
+package com.wzx.demo.rocketmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

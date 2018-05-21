@@ -1,4 +1,4 @@
-package com.wzx.rocketmq.common;
+package com.wzx.demo.rocketmq.common;
 
 import com.wzx.demo.consumerEnum.RocketMqEnum;
 import lombok.Data;
