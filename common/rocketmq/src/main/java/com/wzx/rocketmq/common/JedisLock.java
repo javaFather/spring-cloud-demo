@@ -1,4 +1,5 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
+package com.wzx.rocketmq.common;
+
 import redis.clients.jedis.Jedis;
 
 import java.util.Collections;
