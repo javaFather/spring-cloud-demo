@@ -1,9 +1,8 @@
-package com.wzx.demo.consumer.mapper;
+package com.wzx.demo.mapper;
 
 
 import com.wzx.demo.LoanBaseInfo;
-
-import java.util.Map;
+import org.springframework.stereotype.Component;
 
 /**
  * @author wangzx
@@ -11,5 +10,5 @@ import java.util.Map;
  */
 public interface LoanBaseInfoMapper {
     /** 获取单个对象**/
-    LoanBaseInfo find(Map<String,Object> map);
+    LoanBaseInfo find(String loanNo);
 }

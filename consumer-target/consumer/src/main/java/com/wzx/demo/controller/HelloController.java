@@ -3,6 +3,7 @@ package com.wzx.demo.controller;
 
 import com.wzx.demo.LoanBaseInfo;
 import com.wzx.demo.annotation.UserLogs;
+import com.wzx.demo.mapper.LoanBaseInfoMapper;
 import com.wzx.demo.rocketmq.common.RocketMqProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
@@ -17,13 +18,15 @@ import org.springframework.web.client.RestTemplate;
  * @date 2018
  */
 @RestController
-
 public class HelloController {
     @Autowired
     private RestTemplate restTemplate;
 
     @Autowired
     RocketMqProducer rocketMqProducer;
+
+    @Autowired
+    LoanBaseInfoMapper loanBaseInfoMapper;
 
 
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
@@ -47,6 +50,16 @@ public class HelloController {
         msg.setFlag(10);
         msg.setBody(text.getBytes());
             SendResult send = rocketMqProducer.send(msg);
+
+    }
+
+
+    @RequestMapping(value = "/getByloanNo")
+    public void getByloanNo(){
+        String loanNo= "20170825BDD3FB";
+        LoanBaseInfo loanBaseInfo = loanBaseInfoMapper.find(loanNo);
+        System.out.println(loanBaseInfo);
+
 
     }
 }
