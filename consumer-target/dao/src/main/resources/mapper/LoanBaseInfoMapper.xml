@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wzx.consumer.mapper.LoanBaseInfoMapper" >
-    <resultMap id="BaseResultMap" type="com.wzx.consumer.entity.LoanBaseInfo">
+<mapper namespace="com.wzx.demo.controller.LoanBaseInfoMapper" >
+    <resultMap id="BaseResultMap" type="com.wzx.demo.LoanBaseInfo">
         <result column="loanno" property="loanNo" jdbcType="VARCHAR" />
         <result column="customer_code" property="customerCode" jdbcType="VARCHAR" />
         <result column="customer_name" property="customerName" jdbcType="VARCHAR" />

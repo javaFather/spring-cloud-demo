@@ -2,7 +2,6 @@ package com.wzx.demo.mapper;
 
 
 import com.wzx.demo.LoanBaseInfo;
-import org.springframework.stereotype.Component;
 
 /**
  * @author wangzx

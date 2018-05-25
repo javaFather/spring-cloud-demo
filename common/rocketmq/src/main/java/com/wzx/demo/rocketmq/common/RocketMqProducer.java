@@ -31,7 +31,7 @@ public class RocketMqProducer {
 
             return producer.send(message);
         } catch (Exception e) {
-            logger.error("send msg error : {}", e.getStackTrace());
+            logger.error("send msg error : {}", e);
             return null;
         }
     }
