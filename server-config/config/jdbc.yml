@@ -1,0 +1,14 @@
+server:
+port: 8325
+spring:
+application:
+name: jdbc  #全部小写
+
+
+#####################################################################################################
+# mysql 属性配置
+datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wang
+    username: root
+    password:
