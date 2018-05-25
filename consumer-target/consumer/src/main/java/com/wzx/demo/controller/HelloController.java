@@ -3,6 +3,7 @@ package com.wzx.demo.controller;
 
 import com.wzx.demo.LoanBaseInfo;
 import com.wzx.demo.annotation.UserLogs;
+import com.wzx.demo.mapper.LoanBaseInfoMapper;
 import com.wzx.demo.rocketmq.common.RocketMqProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
@@ -24,8 +25,8 @@ public class HelloController {
     @Autowired
     RocketMqProducer rocketMqProducer;
 
-//    @Autowired
-//    LoanBaseInfoMapper loanBaseInfoMapper;
+    @Autowired
+    LoanBaseInfoMapper loanBaseInfoMapper;
 
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
     @UserLogs(remark = "测试",operation = "成功")
@@ -52,12 +53,12 @@ public class HelloController {
     }
 
 
-//    @RequestMapping(value = "/getByloanNo", method = RequestMethod.GET)
-//    public void getByloanNo(){
-//        String loanNo= "20170825BDD3FB";
-//        LoanBaseInfo loanBaseInfo = loanBaseInfoMapper.find(loanNo);
-//        System.out.println(loanBaseInfo);
-//
-//
-//    }
+    @RequestMapping(value = "/getByloanNo", method = RequestMethod.GET)
+    public void getByloanNo(){
+        String loanNo= "20170825BDD3FB";
+        LoanBaseInfo loanBaseInfo = loanBaseInfoMapper.find(loanNo);
+        System.out.println(loanBaseInfo);
+
+
+    }
 }
