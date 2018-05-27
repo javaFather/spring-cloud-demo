@@ -1,0 +1,32 @@
+server:
+  port: 18081
+
+spring:
+    application:
+        name: mybatis-plus-test
+    cloud:
+        # 使用配置中心
+        config:
+          # 配置了name,则配置文件名为:name-profile.yml/properties
+          name: mybatis-plus
+          # 开发环境
+          profile: ${spring.profiles.active:dev}
+          # 分支
+          label: master
+          discovery:
+              enabled: true
+              serviceId: config-server
+          failFast: true
+    datasource:
+        ####### druid
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/wang
+        username: root
+        password: spdb1234
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8260/eureka
+    #主动获取其他服务注册状态 的时间,默认60s
+    registryFetchIntervalSeconds: 5

@@ -1,4 +1,4 @@
-package com.wzx.demo.config;
+package com.wzx.demo.mybatisplus.config;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
