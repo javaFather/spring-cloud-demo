@@ -18,7 +18,6 @@ public class LoanBaseService {
 
     public List<LoanBaseInfo>  add(){
         LoanBaseInfo loanBaseInfo=new LoanBaseInfo();
-        loanBaseInfo.setAmount(BigDecimal.ONE);
         loanBaseInfo.setCustomerCode("sss-1");
         loanBaseInfo.setCustomerName("sss-name1");
         loanBaseMapper.insert(loanBaseInfo);
