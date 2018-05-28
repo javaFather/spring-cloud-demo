@@ -22,8 +22,8 @@ public class HelloController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
-    RocketMqProducer rocketMqProducer;
+//    @Autowired
+//    RocketMqProducer rocketMqProducer;
 
     @Autowired
     LoanBaseInfoMapper loanBaseInfoMapper;
@@ -41,16 +41,16 @@ public class HelloController {
      * @author wangzx
      * @date 2018/5/21 15:55
      */
-    @RequestMapping(value = "/getRocketMq", method = RequestMethod.GET)
-    public void getRocketMq(){
-        Message msg = new Message();
-        String text = "一条大河";
-        msg.setTopic("weichat");
-        msg.setFlag(10);
-        msg.setBody(text.getBytes());
-            SendResult send = rocketMqProducer.send(msg);
-
-    }
+//    @RequestMapping(value = "/getRocketMq", method = RequestMethod.GET)
+//    public void getRocketMq(){
+//        Message msg = new Message();
+//        String text = "一条大河";
+//        msg.setTopic("weichat");
+//        msg.setFlag(10);
+//        msg.setBody(text.getBytes());
+//            SendResult send = rocketMqProducer.send(msg);
+//
+//    }
 
 
     @RequestMapping(value = "/getByloanNo", method = RequestMethod.GET)
