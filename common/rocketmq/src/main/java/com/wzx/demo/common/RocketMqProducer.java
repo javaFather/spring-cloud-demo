@@ -6,7 +6,6 @@ import org.apache.rocketmq.client.producer.SendStatus;
 import org.apache.rocketmq.common.message.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
 import java.util.Objects;
@@ -15,7 +14,6 @@ import java.util.Objects;
  * @author YM10174
  * @date 2018/5/11 14:17:30
  */
-@Component
 public class RocketMqProducer {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 

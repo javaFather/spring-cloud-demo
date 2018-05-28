@@ -34,11 +34,8 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
+        <!-- 数据库驱动 -->
+        <!-- 不加 Cannot determine embedded database driver class for database type NONE -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>

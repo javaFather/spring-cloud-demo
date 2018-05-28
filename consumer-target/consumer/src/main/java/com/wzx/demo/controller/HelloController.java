@@ -48,7 +48,7 @@ public class HelloController {
         msg.setTopic("weichat");
         msg.setFlag(10);
         msg.setBody(text.getBytes());
-            SendResult send = rocketMqProducer.send(msg);
+        SendResult send = rocketMqProducer.send(msg);
 
     }
 

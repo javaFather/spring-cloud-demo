@@ -5,7 +5,7 @@ server:
 spring:
   application:
       # spring.application.name必须要设置，服务消费者将通过该名称调用所提供的服务。
-      name: consumer-target
+      name: consumer-rocketmq
   cloud:
     # 使用配置中心
     config:
@@ -32,5 +32,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8260/eureka
-    #主动获取其他服务注册状态 的时间,默认60s
-    registryFetchIntervalSeconds: 5

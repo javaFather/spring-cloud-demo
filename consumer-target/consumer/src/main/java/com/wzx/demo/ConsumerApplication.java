@@ -3,7 +3,6 @@ package com.wzx.demo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
@@ -14,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
  * @date 2018/4/19 10:54
  */
 
-@EnableDiscoveryClient
 @SpringCloudApplication
 @MapperScan("com.wzx.demo.mapper.LoanBaseInfoMapper")
 public class ConsumerApplication {
