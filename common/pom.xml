@@ -17,6 +17,7 @@
         <module>mybaties</module>
         <module>basic</module>
         <module>rocketmq</module>
+        <module>redis-lock</module>
     </modules>
 
 

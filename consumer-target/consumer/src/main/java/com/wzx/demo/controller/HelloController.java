@@ -4,7 +4,7 @@ package com.wzx.demo.controller;
 import com.wzx.demo.LoanBaseInfo;
 import com.wzx.demo.annotation.UserLogs;
 import com.wzx.demo.mapper.LoanBaseInfoMapper;
-import com.wzx.demo.rocketmq.common.RocketMqProducer;
+import com.wzx.demo.common.RocketMqProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +22,9 @@ public class HelloController {
     @Autowired
     private RestTemplate restTemplate;
 
-//    @Autowired
-//    RocketMqProducer rocketMqProducer;
 
+    @Autowired
+    RocketMqProducer rocketMqProducer;
     @Autowired
     LoanBaseInfoMapper loanBaseInfoMapper;
 
@@ -41,24 +41,23 @@ public class HelloController {
      * @author wangzx
      * @date 2018/5/21 15:55
      */
-//    @RequestMapping(value = "/getRocketMq", method = RequestMethod.GET)
-//    public void getRocketMq(){
-//        Message msg = new Message();
-//        String text = "一条大河";
-//        msg.setTopic("weichat");
-//        msg.setFlag(10);
-//        msg.setBody(text.getBytes());
-//            SendResult send = rocketMqProducer.send(msg);
-//
-//    }
+    @RequestMapping(value = "/getRocketMq", method = RequestMethod.GET)
+    public void getRocketMq(){
+        Message msg = new Message();
+        String text = "一条大河";
+        msg.setTopic("weichat");
+        msg.setFlag(10);
+        msg.setBody(text.getBytes());
+            SendResult send = rocketMqProducer.send(msg);
+
+    }
 
 
     @RequestMapping(value = "/getByloanNo", method = RequestMethod.GET)
     public void getByloanNo(){
         String loanNo= "20170825BDD3FB";
-        LoanBaseInfo loanBaseInfo = loanBaseInfoMapper.find(loanNo);
-        System.out.println(loanBaseInfo);
-
+        LoanBaseInfo loanBaseInfo = new LoanBaseInfo();
+        loanBaseInfoMapper.insert(loanNo);
 
 
     }

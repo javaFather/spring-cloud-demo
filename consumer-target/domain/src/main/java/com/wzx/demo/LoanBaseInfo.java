@@ -5,8 +5,6 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import lombok.Data;
 import lombok.ToString;
 
-import java.math.BigDecimal;
-
 import static com.baomidou.mybatisplus.enums.FieldFill.INSERT;
 
 /**
@@ -23,6 +21,4 @@ public class LoanBaseInfo {
     private String customerCode;
     @TableField(value = "customername", fill = INSERT)
     private String customerName;
-    @TableField(value = "amount", fill = INSERT)
-    private BigDecimal amount;
 }

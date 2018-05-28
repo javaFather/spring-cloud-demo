@@ -32,3 +32,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8260/eureka
+    #主动获取其他服务注册状态 的时间,默认60s
+    registryFetchIntervalSeconds: 5

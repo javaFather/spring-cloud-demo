@@ -1,6 +1,6 @@
-package com.wzx.demo.rocketmq.config;
+package com.wzx.demo.config;
 
-import com.wzx.demo.rocketmq.common.RocketMqProducer;
+import com.wzx.demo.common.RocketMqProducer;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -3,23 +3,12 @@
 <mapper namespace="com.wzx.demo.mapper.LoanBaseInfoMapper" >
     <resultMap id="BaseResultMap" type="com.wzx.demo.LoanBaseInfo">
         <result column="loanno" property="loanNo" jdbcType="VARCHAR" />
-        <result column="customer_code" property="customerCode" jdbcType="VARCHAR" />
-        <result column="customer_name" property="customerName" jdbcType="VARCHAR" />
-        <result column="amount" property="amount" jdbcType="DECIMAL" />
+        <result column="customercode" property="customerCode" jdbcType="VARCHAR" />
+        <result column="customername" property="customerName" jdbcType="VARCHAR" />
     </resultMap>
     <sql id="Base_Column_List">
         loanno,customer_code,customer_name,amount
     </sql>
-
-    <select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select
-          <include refid="Base_Column_List"/>
-        from loan_base_info
-        where 1=1 and loanno=#{loanno}
-    </select>
-
-
-
 
 
 </mapper>
