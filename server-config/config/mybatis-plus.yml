@@ -1,4 +1,6 @@
-
+rocketmq:
+  apache:
+    rocketmq: consumer.PushConsumer=PushConsumer=PushConsumer
 
 mybatis-plus:
     mapper-locations: classpath*:/mapper/*Mapper.xml
@@ -24,3 +26,5 @@ mybatis-plus:
         #sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
         #自定义填充策略接口实现
         #meta-object-handler: com.baomidou.springboot.xxx
+
+
