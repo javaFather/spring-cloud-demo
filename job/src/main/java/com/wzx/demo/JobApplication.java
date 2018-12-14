@@ -11,6 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
+/**允许开启定时任务**/
 @EnableScheduling
 public class JobApplication {
     public static void main(String[] args) {
