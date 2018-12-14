@@ -15,6 +15,7 @@
         <module>common</module>
         <module>server-config</module>
         <module>model-test</module>
+        <module>job</module>
     </modules>
 
 
