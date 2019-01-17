@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigDecimal;
-
 
 @RestController
 public class HelloEndPoint {
@@ -25,7 +23,7 @@ public class HelloEndPoint {
 
     @RequestMapping(value = "/findByLoanNo", method = RequestMethod.GET)
     public LoanBaseInfo hello() {
-        this.logger.info("/hello, instanceId:{}, host:{}", eurekaInstanceConfig.getInstanceId(), eurekaInstanceConfig.getHostName(false));
+        logger.info("/hello, instanceId:{}, host:{}", eurekaInstanceConfig.getInstanceId(), eurekaInstanceConfig.getHostName(false));
             LoanBaseInfo loanBaseInfo = new LoanBaseInfo();
             loanBaseInfo.setLoanNo("20170825BDD3FB");
             loanBaseInfo.setCustomerCode("wangzx");
